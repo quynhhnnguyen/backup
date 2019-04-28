@@ -1,0 +1,12 @@
+﻿/* Travel Experts Styles */
+.mainheading{
+    margin-top:30px;
+    color:blue;
+}
+.lablestyle{
+    color:blue;
+}
+.lableerror{
+    color:red;
+    font-style:oblique;
+}

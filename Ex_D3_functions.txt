@@ -1,0 +1,76 @@
+3) Write a Function to Give Average Quantity Ordered for a size (Tables Inventory and Order_Line)
+create or replace function Average_Quantity_Ordered(sizex char)
+    return number
+as
+    avg_qty_ordered number(6);
+begin
+    select avg(ol_quantity) into avg_qty_ordered 
+    from inventory i inner join order_line o on i.inv_id = o.inv_id
+    where upper(i.inv_size) = upper(sizex);
+    return avg_qty_ordered; 
+end;
+/
+
+4) Write a Function to Show Number of Unique Colors 
+	For a Category#
+	(Tables Item, Inventory)
+	E.g. 1 Red S
+		1 Red M
+		1 Blue M
+		1 Blue L
+==> 2 Colors
+create or replace function ShowColorNumber(catId number)
+    return number  
+as
+    record number(6);
+begin
+    select count(distinct color), cat_id,inv_size into record 
+    from item i inner join inventory inv on i.item_id = inv.item_id
+    where i.cat_id = catId; 
+    return record;
+end;
+/
+
+select count(distinct color), cat_id, color 
+    from item i inner join inventory inv on i.item_id = inv.item_id group by cat_id, color;
+
+5) Write a function to Give Total Amount (OL_QUatity * Inv_Price)
+	A Customer# bought
+	(Tables Orders, Order_Line, Inventory)
+
+create or replace function TotalAmount(customerId number)
+    return number
+as
+    totalAmt number(10,2);
+begin
+    select sum(OL_Quantity * Inv_Price) into totalAmt
+    from (orders natural join order_line)
+	 	natural join inventory
+    where c_id = customerId; 
+    return totalAmt;
+end;
+/
+
+6) Write a Function
+to Give Total Quantity Ordered for a state and size
+(Tables Customer, Orders, Order_Line, Inventory)
+Select SizeOrd('MN', 'S') from Dual;
+
+create or replace function TotalQntOrdered(stateVal char, sizeVal char)
+    return number
+as
+    totalQnt number(10);
+begin
+    select sum(OL_Quantity) into totalQnt
+    from ((customer natural join orders)
+	 	natural join order_line)
+		natural join inventory
+    where c_state= stateVal and inv_size=sizeVal; 
+    return totalQnt;
+end;
+/
+
+select sum(OL_Quantity) 
+    from ((orders natural join order_line)
+	 	natural join inventory)
+		natural join customer

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context="com.travelexperts.AgentDetailActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+
+        <LinearLayout
+            android:layout_width="187dp"
+            android:layout_height="593dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+
+            <TextView
+                android:id="@+id/lblAgentId"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Agent Id:"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnFName"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="First Name:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnMName"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Middle Name:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnLName"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Last Name:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Phone Number:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Email:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnPosition"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Position:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAgnAgencyId"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingTop="10dp"
+                android:text="Agency Id:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="219dp"
+            android:layout_height="593dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <EditText
+                android:id="@+id/etAgentId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnFName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnMName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnLName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnPhoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName|text"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName|text"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/etAgnAgencyId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="phone"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.62" />
+</android.support.constraint.ConstraintLayout>

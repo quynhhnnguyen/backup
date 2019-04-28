@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Customers">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="98.0" layoutY="29.0" text="Customer Id" />
+                  <ComboBox fx:id="cbCustomerId" layoutX="201.0" layoutY="25.0" prefHeight="25.0" prefWidth="149.0" />
+                  <VBox layoutX="56.0" layoutY="81.0" prefHeight="381.0" prefWidth="108.0" spacing="19.0">
+                     <children>
+                        <Label text="First Name" />
+                        <Label text="Last Name" />
+                        <Label text="Address" />
+                        <Label text="City" />
+                        <Label text="Province" />
+                        <Label text="Postal Code" />
+                        <Label text="Country" />
+                        <Label text="Home Phone" />
+                        <Label text="Business Phone" />
+                        <Label text="Email" />
+                        <Label text="Agent Id" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <VBox layoutX="184.0" layoutY="81.0" prefHeight="348.0" prefWidth="217.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="CustFirstName" />
+                        <TextField fx:id="CustLastName" />
+                        <TextField fx:id="CustAddress" />
+                        <TextField fx:id="CustCity" />
+                        <TextField fx:id="CustProv" />
+                        <TextField fx:id="CustPostal" />
+                        <TextField fx:id="CustCountry" />
+                        <TextField fx:id="CustHomePhone" />
+                        <TextField fx:id="CustBusPhone" />
+                        <TextField fx:id="CustEmail" />
+                        <ComboBox fx:id="cbAgentId" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnEdit" layoutX="112.0" layoutY="484.0" mnemonicParsing="false" onAction="#editCustomer" text="Edit" />
+                  <Button fx:id="btnSave" layoutX="235.0" layoutY="484.0" mnemonicParsing="false" onAction="#saveCustomer" text="Save" />
+                  <Button fx:id="btnClearCustomer" layoutX="307.0" layoutY="484.0" mnemonicParsing="false" onAction="#clearCustomer" text="Clear" />
+                  <Button fx:id="btnAddCustomer" layoutX="164.0" layoutY="484.0" mnemonicParsing="false" onAction="#addCustomer" text="Add" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Bookings">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="91.0" layoutY="41.0" text="Booking Id" />
+                  <VBox layoutX="63.0" layoutY="127.0" prefHeight="200.0" prefWidth="100.0" spacing="17.0">
+                     <children>
+                        <Label text="Booking Date" />
+                        <Label text="Booking No." />
+                        <Label text="Traveler Count" />
+                        <Label text="Customer Id" />
+                        <Label text="Trip Type Id" />
+                        <Label text="Package Id" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="210.0" layoutY="118.0" prefHeight="258.0" prefWidth="241.0" spacing="10.0">
+                     <children>
+                        <DatePicker fx:id="BookingDate" prefHeight="25.0" prefWidth="238.0" />
+                        <TextField fx:id="BookingNo" />
+                        <TextField fx:id="TravelerCount" />
+                        <ComboBox fx:id="cbCustId" prefHeight="25.0" prefWidth="175.0" />
+                        <ComboBox fx:id="cbTripTypeId" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="PackageId" />
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="cbBookingId" layoutX="196.0" layoutY="37.0" prefWidth="150.0" />
+                  <Button fx:id="btnEditBookings" layoutX="137.0" layoutY="392.0" mnemonicParsing="false" onAction="#editBookings" text="Edit" />
+                  <Button fx:id="btnSaveBookings" layoutX="271.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveBookings" text="Save" />
+                  <Button fx:id="btnClearBookings" layoutX="346.0" layoutY="392.0" mnemonicParsing="false" onAction="#clearBookings" text="Clear" />
+                  <Button fx:id="btnAddBookings" layoutX="196.0" layoutY="392.0" mnemonicParsing="false" onAction="#addBookings" text="Add" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Packages">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="109.0" layoutY="43.0" text="Package Id" />
+                  <ComboBox fx:id="cbPackageId" layoutX="200.0" layoutY="39.0" prefWidth="150.0" />
+                  <VBox layoutX="74.0" layoutY="95.0" prefHeight="208.0" prefWidth="128.0" spacing="24.0">
+                     <children>
+                        <Label text="Name" />
+                        <Label text="Start Date" />
+                        <Label text="End Date" />
+                        <Label text="Description" />
+                        <Label text="Base Price" />
+                        <Label text="Agency Commission" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="225.0" layoutY="95.0" prefHeight="281.0" prefWidth="272.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="PkgName" />
+                        <DatePicker fx:id="PkgStartDate" prefHeight="25.0" prefWidth="298.0" />
+                        <DatePicker fx:id="PkgEndDate" prefHeight="25.0" prefWidth="280.0" />
+                        <TextField fx:id="PkgDesc" prefHeight="52.0" prefWidth="217.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PkgBasePrice" />
+                        <TextField fx:id="PkgAgencyCommission" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnEditPackages" layoutX="141.0" layoutY="385.0" mnemonicParsing="false" onAction="#editPackages" text="Edit" />
+                  <Button fx:id="btnSavePackages" layoutX="274.0" layoutY="385.0" mnemonicParsing="false" onAction="#savePackages" text="Save" />
+                  <Button fx:id="btnClearPackages" layoutX="361.0" layoutY="385.0" mnemonicParsing="false" onAction="#clearPackages" text="Clear" />
+                  <Button fx:id="btnAddPackages" layoutX="199.0" layoutY="385.0" mnemonicParsing="false" onAction="#addPackages" text="Add" />
+                  <Button fx:id="btnDeletePackage" layoutX="445.0" layoutY="385.0" mnemonicParsing="false" onAction="#deletePackage" prefHeight="25.0" prefWidth="56.0" text="Delete " />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Products">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="cbProductId" layoutX="200.0" layoutY="58.0" prefWidth="150.0" />
+                  <Label layoutX="89.0" layoutY="62.0" text="Product Id" />
+                  <Label layoutX="89.0" layoutY="120.0" text="Product Name" />
+                  <TextField fx:id="ProdName" layoutX="201.0" layoutY="116.0" />
+                  <Button fx:id="btnEditProducts" layoutX="91.0" layoutY="254.0" mnemonicParsing="false" onAction="#editProducts" text="Edit" />
+                  <Button fx:id="btnSaveProducts" layoutX="223.0" layoutY="254.0" mnemonicParsing="false" onAction="#saveProducts" text="Save" />
+                  <Button fx:id="btnClear" layoutX="309.0" layoutY="254.0" mnemonicParsing="false" onAction="#clearProducts" text="Clear" />
+                  <Button fx:id="btnAddProducts" layoutX="155.0" layoutY="254.0" mnemonicParsing="false" onAction="#addProducts" text="Add" />
+                  <Button fx:id="btnDeleteProduct" layoutX="392.0" layoutY="254.0" mnemonicParsing="false" onAction="#deleteProduct" text="Delete" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
